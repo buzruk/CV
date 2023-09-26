@@ -36,6 +36,8 @@
 		E68250902AC302BB001FC8AB /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */; };
 		E68250922AC30319001FC8AB /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250912AC30319001FC8AB /* InterestsView.swift */; };
 		E68250942AC30325001FC8AB /* InterestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250932AC30325001FC8AB /* InterestsViewModel.swift */; };
+		E68250972AC30377001FC8AB /* Mainview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250962AC30377001FC8AB /* Mainview.swift */; };
+		E68250992AC3038E001FC8AB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250982AC3038E001FC8AB /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		E68250912AC30319001FC8AB /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		E68250932AC30325001FC8AB /* InterestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewModel.swift; sourceTree = "<group>"; };
+		E68250962AC30377001FC8AB /* Mainview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainview.swift; sourceTree = "<group>"; };
+		E68250982AC3038E001FC8AB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		E682506C2AC2FD0B001FC8AB /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				E68250952AC30372001FC8AB /* Main */,
 				E68250712AC2FD34001FC8AB /* Interests */,
 				E68250702AC2FD30001FC8AB /* Trainings */,
 				E682506F2AC2FD26001FC8AB /* Skills */,
@@ -238,6 +243,15 @@
 				E682508B2AC30130001FC8AB /* FlowLayout.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E68250952AC30372001FC8AB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E68250962AC30377001FC8AB /* Mainview.swift */,
+				E68250982AC3038E001FC8AB /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +332,9 @@
 				E682508E2AC302A9001FC8AB /* TrainingView.swift in Sources */,
 				E68250772AC2FD92001FC8AB /* CGFloat+Extension.swift in Sources */,
 				E68250652AC2FC10001FC8AB /* Typealiases.swift in Sources */,
+				E68250992AC3038E001FC8AB /* MainViewModel.swift in Sources */,
 				E682507D2AC2FFD4001FC8AB /* TimelineViewModel.swift in Sources */,
+				E68250972AC30377001FC8AB /* Mainview.swift in Sources */,
 				E68250862AC300F3001FC8AB /* SkillsViewModel.swift in Sources */,
 				E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */,
 				E68250442AC2FAAE001FC8AB /* CVApp.swift in Sources */,
