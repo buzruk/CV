@@ -32,6 +32,8 @@
 		E68250882AC30103001FC8AB /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250872AC30103001FC8AB /* SkillsView.swift */; };
 		E682508A2AC3011A001FC8AB /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250892AC3011A001FC8AB /* TagView.swift */; };
 		E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508B2AC30130001FC8AB /* FlowLayout.swift */; };
+		E682508E2AC302A9001FC8AB /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508D2AC302A9001FC8AB /* TrainingView.swift */; };
+		E68250902AC302BB001FC8AB /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		E68250872AC30103001FC8AB /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		E68250892AC3011A001FC8AB /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		E682508B2AC30130001FC8AB /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		E682508D2AC302A9001FC8AB /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 		E68250702AC2FD30001FC8AB /* Trainings */ = {
 			isa = PBXGroup;
 			children = (
+				E682508D2AC302A9001FC8AB /* TrainingView.swift */,
+				E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */,
 			);
 			path = Trainings;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				E682505D2AC2FBC6001FC8AB /* Education.swift in Sources */,
 				E68250792AC2FE1E001FC8AB /* Color+Extension.swift in Sources */,
 				E68250592AC2FB7E001FC8AB /* Person.swift in Sources */,
+				E682508E2AC302A9001FC8AB /* TrainingView.swift in Sources */,
 				E68250772AC2FD92001FC8AB /* CGFloat+Extension.swift in Sources */,
 				E68250652AC2FC10001FC8AB /* Typealiases.swift in Sources */,
 				E682507D2AC2FFD4001FC8AB /* TimelineViewModel.swift in Sources */,
@@ -309,6 +316,7 @@
 				E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */,
 				E68250442AC2FAAE001FC8AB /* CVApp.swift in Sources */,
 				E682505B2AC2FBBB001FC8AB /* Skill.swift in Sources */,
+				E68250902AC302BB001FC8AB /* TrainingViewModel.swift in Sources */,
 				E68250752AC2FD65001FC8AB /* HeaderViewModel.swift in Sources */,
 				E68250692AC2FC91001FC8AB /* Date+Extension.swift in Sources */,
 				E68250572AC2FB72001FC8AB /* Person+me.swift in Sources */,
