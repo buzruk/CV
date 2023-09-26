@@ -168,8 +168,6 @@ private extension VerticalAlignment {
   static let titleAndTimelineRectangle = VerticalAlignment(TitleAndTimelineRectangle.self)
 }
 
-struct TimelineView_Previews: PreviewProvider {
-  static var previews: some View {
-    TimelineView(viewModel: TimelineViewModel(jobs: Person.me.jobs))
-  }
+#Preview {
+  TimelineView(viewModel: TimelineViewModel(jobs: Person.me.jobs))
 }

@@ -28,6 +28,10 @@
 		E68250802AC30026001FC8AB /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682507F2AC30026001FC8AB /* DateView.swift */; };
 		E68250822AC3008B001FC8AB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250812AC3008B001FC8AB /* InfoViewModel.swift */; };
 		E68250842AC300B4001FC8AB /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250832AC300B4001FC8AB /* DateFormatter+Extension.swift */; };
+		E68250862AC300F3001FC8AB /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250852AC300F3001FC8AB /* SkillsViewModel.swift */; };
+		E68250882AC30103001FC8AB /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250872AC30103001FC8AB /* SkillsView.swift */; };
+		E682508A2AC3011A001FC8AB /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250892AC3011A001FC8AB /* TagView.swift */; };
+		E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508B2AC30130001FC8AB /* FlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		E682507F2AC30026001FC8AB /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		E68250812AC3008B001FC8AB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		E68250832AC300B4001FC8AB /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		E68250852AC300F3001FC8AB /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		E68250872AC30103001FC8AB /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		E68250892AC3011A001FC8AB /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		E682508B2AC30130001FC8AB /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,8 @@
 		E682506F2AC2FD26001FC8AB /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				E68250872AC30103001FC8AB /* SkillsView.swift */,
+				E68250852AC300F3001FC8AB /* SkillsViewModel.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -212,6 +222,8 @@
 			children = (
 				E682507F2AC30026001FC8AB /* DateView.swift */,
 				E68250812AC3008B001FC8AB /* InfoViewModel.swift */,
+				E68250892AC3011A001FC8AB /* TagView.swift */,
+				E682508B2AC30130001FC8AB /* FlowLayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -286,17 +298,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68250882AC30103001FC8AB /* SkillsView.swift in Sources */,
 				E682505D2AC2FBC6001FC8AB /* Education.swift in Sources */,
 				E68250792AC2FE1E001FC8AB /* Color+Extension.swift in Sources */,
 				E68250592AC2FB7E001FC8AB /* Person.swift in Sources */,
 				E68250772AC2FD92001FC8AB /* CGFloat+Extension.swift in Sources */,
 				E68250652AC2FC10001FC8AB /* Typealiases.swift in Sources */,
 				E682507D2AC2FFD4001FC8AB /* TimelineViewModel.swift in Sources */,
+				E68250862AC300F3001FC8AB /* SkillsViewModel.swift in Sources */,
+				E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */,
 				E68250442AC2FAAE001FC8AB /* CVApp.swift in Sources */,
 				E682505B2AC2FBBB001FC8AB /* Skill.swift in Sources */,
 				E68250752AC2FD65001FC8AB /* HeaderViewModel.swift in Sources */,
 				E68250692AC2FC91001FC8AB /* Date+Extension.swift in Sources */,
 				E68250572AC2FB72001FC8AB /* Person+me.swift in Sources */,
+				E682508A2AC3011A001FC8AB /* TagView.swift in Sources */,
 				E68250732AC2FD50001FC8AB /* HeaderView.swift in Sources */,
 				E68250612AC2FBE9001FC8AB /* Training.swift in Sources */,
 				E682505F2AC2FBD4001FC8AB /* Job.swift in Sources */,
@@ -448,7 +464,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
@@ -486,7 +502,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;

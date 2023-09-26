@@ -99,12 +99,8 @@ struct HeaderView: View {
   }
 }
 
-struct HeaderView_Previews: PreviewProvider {
-  static var previews: some View {
-    HeaderView(
-      viewModel: HeaderViewModel(person: .me)
-    )
+#Preview {
+  HeaderView(viewModel: HeaderViewModel(person: .me))
     .padding()
     .previewLayout(.fixed(width: 800, height: 300))
-  }
 }
