@@ -17,9 +17,9 @@ struct Person {
   let address: Address
   let contactInfo: ContactInfo
   let jobs: [Job]
+  let projects: [Project]
   let educationalBackground: [Education]
   let skills: [[Skill]]
-  let trainings: [Training]
   let interests: [Interest]
 }
 
@@ -34,7 +34,7 @@ extension Person {
 
 extension Person {
   struct ContactInfo {
-    let telephoneNumber: String
+    let phoneNumber: String
     let email: String
     let website: URL
   }
@@ -42,6 +42,7 @@ extension Person {
 
 extension Person {
   enum Gender {
-    case male, female, nonbinary
+    case male
+    case female
   }
 }

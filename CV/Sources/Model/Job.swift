@@ -20,3 +20,12 @@ struct Job: PeriodOfLife {
   let programmingLanguages: [ProgrammingLanguage]
   let info: [String]
 }
+
+struct Project: PeriodOfLife {
+  let name: String
+  let startDate: Date
+  let endDate: Date?
+  let url: String
+  let programmingLanguages: [ProgrammingLanguage]
+  let info: [String]
+}

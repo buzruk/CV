@@ -26,8 +26,6 @@ private extension Person.Gender {
       return "male"
     case .female:
       return "female"
-    case .nonbinary:
-      return "nonbinary"
     }
   }
 }
@@ -73,7 +71,7 @@ extension HeaderViewModel {
         id: .contact,
         iconName: "envelope",
         texts: [
-          (content: person.contactInfo.telephoneNumber, contentDescription: "Phone"),
+          (content: person.contactInfo.phoneNumber, contentDescription: "Phone"),
           (content: person.contactInfo.email, contentDescription: "Email"),
           (content: formattedWebsite, contentDescription: "Website"),
         ]

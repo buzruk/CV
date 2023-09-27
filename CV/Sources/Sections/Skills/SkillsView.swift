@@ -49,10 +49,8 @@ struct SkillsView: View {
             .foregroundColor(.cvPrimary)
           ProgressView(value: viewModel.percentCompleted)
             .tint(.accentColor)
-
             .background(Color.accentColor.opacity(0.3))
         }
-        .accessibilityElement(children: .combine)
       }
     }
   }

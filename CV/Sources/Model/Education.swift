@@ -13,15 +13,9 @@ protocol Graduation {
 
 struct Education: PeriodOfLife {
   enum Degree {
-    case abitur(graduation: SchoolGraduation), bachelor(graduation: UniversityGraduation?)
-
-    struct SchoolGraduation: Graduation {
-      let finalGrade: Float
-    }
+    case bachelor(graduation: UniversityGraduation?)
 
     struct UniversityGraduation: Graduation {
-      let topicOfFinalThesis: String
-      let gradeOfFinalThesis: Float
       let finalGrade: Float
     }
   }

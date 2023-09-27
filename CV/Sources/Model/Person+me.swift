@@ -9,203 +9,98 @@ import Foundation
 
 extension Person {
   static let me = Person(
-    name: "Vincent Felix Friedrich",
+    name: "Buzurgmexr Sultonaliyev",
     gender: .male,
     role: "iOS Developer",
     imageName: "me",
-    birthday: Date.from(day: 26, month: 10, year: 1994)!,
-    nationality: "German",
+    birthday: Date.from(day: 23, month: 9, year: 2001)!,
+    nationality: "Tajik",
     address: Address(
-      street: "Bromberger Str. 37",
-      zip: "21629",
-      city: "Neu Wulmstorf",
-      country: "Germany"
+      street: "Farobiy Str.",
+      zip: "150100",
+      city: "Fergana",
+      country: "Uzbekistan"
     ),
     contactInfo: ContactInfo(
-      telephoneNumber: "+49 160 90385431",
-      email: "vincefried@web.de",
-      website: URL(string: "https://www.vincent-friedrich.de")!
+      phoneNumber: "+998 77 777 4367",
+      email: "buzurgmexrs@gmail.com",
+      website: URL(string: "https://buzruk.github.io/")!
     ),
-    jobs: [
-      Job(
-        companyName: "Quartett Mobile",
-        startDate: Date.from(day: 3, month: 8, year: 2023)!,
+    jobs: [],
+    projects: [
+      Project(
+        name: "Calculator-iOS-Storyboard",
+        startDate: Date.from(month: 5, year: 2023)!,
         endDate: nil,
-        role: "iOS Developer",
+        url: "https://github.com/buzruk/UIKit-Calculator",
         programmingLanguages: [.swift],
         info: [
-          "Developed the myAudi native iOS App",
+          "iOS calculator's clone in UIKit Storyboard",
+          "Project built in MVC design pattern",
+          "In project used UIKit",
         ]
       ),
-      Job(
-        companyName: "Parship Group",
-        startDate: Date.from(day: 1, month: 8, year: 2020)!,
-        endDate: Date.from(day: 31, month: 7, year: 2023)!,
-        role: "iOS Developer",
+      Project(
+        name: "iMusicClone",
+        startDate: Date.from(month: 7, year: 2023)!,
+        endDate: nil,
+        url: "https://github.com/buzruk/iMusicClone",
         programmingLanguages: [.swift],
         info: [
-          "Developed the Parship, ElitePartner and eharmony native iOS Apps",
-          "Implemented features in MVVM+C pattern",
-          "Modularized features using Swift Package Manager",
-          "Proactively pushed topics including advances in architecture, the integration of SwiftUI and the reimplementation of the messenger",
-          "Maintained the CI pipeline with fastlane and GitHub Actions",
-          "Organized internal events (hackathon, team event)",
-          "Organized CocoaHeads iOS Meetuo at Parship in Hamburg and held presentation",
-          "Held job interviews",
+          "iMusic has a built-in music library, covering the most popular artists, genres and hottest playlists. You can search for the artists, songs and playlists and listen to them",
+          "Project built in Clean Swift (VIP) design pattern",
+          "In project used UIKit and SwiftUI",
+          "You can search music and add it to your library",
         ]
       ),
-      Job(
-        companyName: "For Sale Mobile",
-        startDate: Date.from(day: 1, month: 8, year: 2019)!,
-        endDate: Date.from(day: 31, month: 7, year: 2020)!,
-        role: "App Developer",
-        programmingLanguages: [.swift, .cSharp],
-        info: [
-          "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
-          "Developed service contract management app for Volvo Trucks (iOS, VIP pattern)",
-          "Developed smart shopping list „HNGRY“ (iOS, VIPER pattern)",
-          "Designed and implemented UI concepts for multiple apps using Sketch",
-          "Maintained internal server structure and CI pipeline",
-        ]
-      ),
-      Job(
-        companyName: "For Sale Mobile",
-        startDate: Date.from(day: 1, month: 6, year: 2015)!,
-        endDate: Date.from(day: 31, month: 7, year: 2019)!,
-        role: "Working Student App Developer",
-        programmingLanguages: [.swift, .objC, .cSharp],
-        info: [
-          "Developed fridge IoT app „SmartDevice“ for Liebherr Hausgeräte (Xamarin, MVVM pattern)",
-          "Developed service contract management app for Volvo Trucks (iOS, VIP pattern)",
-          "Developed „Icecrusher“ marketing app for Liebherr Hausgeräte (iOS & Android / Unity hybrid)",
-          "Developed „Biofresh“ marketing app for Liebherr Hausgeräte (iOS & Android)",
-          "Designed and implemented UI concepts for multiple apps using Sketch",
-          "Maintained internal server structure and CI pipeline",
-        ]
-      ),
-      Job(
-        companyName: "EOS Uptrade",
-        startDate: Date.from(month: 2, year: 2014)!,
-        endDate: Date.from(month: 2, year: 2014)!,
-        role: "Trainee iOS / Android Developer",
-        programmingLanguages: [.objC, .java],
-        info: []
-      ),
-      Job(
-        companyName: "EOS Uptrade",
-        startDate: Date.from(month: 10, year: 2013)!,
-        endDate: Date.from(month: 10, year: 2013)!,
-        role: "Trainee iOS Developer",
-        programmingLanguages: [.objC],
-        info: []
-      ),
-      Job(
-        companyName: "Justcom",
-        startDate: Date.from(month: 9, year: 2013)!,
-        endDate: Date.from(month: 2, year: 2014)!,
-        role: "Sidejob Customer Service",
-        programmingLanguages: [],
-        info: [
-          "Telephone support",
-          "Maintained online shop",
-        ]
-      ),
+//      Project(
+//        name: "Calculator-iOS-Storyboard",
+//        url: "https://github.com/buzruk/UIKit-Calculator.git",
+//        programmingLanguages: [.swift],
+//        info: ["iOS calculator's clone in UIKit Storyboard"]
+//      ),
     ],
     educationalBackground: [
-      Education(
-        institutionName: "HAW Hamburg",
-        city: "Hamburg",
-        startDate: Date.from(month: 9, year: 2016)!,
-        endDate: Date.from(month: 8, year: 2019)!,
-        seekedDegree: .bachelor(
-          graduation: .init(
-            topicOfFinalThesis: """
-            Design and Implementation of a native iOS App that exchanges Messages using innovative Features
-            """,
-            gradeOfFinalThesis: 1.0,
-            finalGrade: 2.0
-          )
-        ),
-        programOfStudy: "Media Systems"
-      ),
-      Education(
-        institutionName: "FH Wedel",
-        city: "Schleswig-Holstein",
-        startDate: Date.from(month: 4, year: 2014)!,
-        endDate: Date.from(month: 8, year: 2016)!,
-        seekedDegree: .bachelor(graduation: .none),
-        programOfStudy: "Media Computer Science"
-      ),
-      Education(
-        institutionName: "Gymnasium Lerchenfeld",
-        city: "Hamburg",
-        startDate: Date.from(month: 8, year: 2005)!,
-        endDate: Date.from(month: 6, year: 2013)!,
-        seekedDegree: .abitur(graduation: .init(finalGrade: 2.6)),
-        programOfStudy: nil
-      ),
+            Education(
+                institutionName: "Fergana Polytechnic Institute",
+                city: "Fergana",
+                startDate: Date.from(month: 9, year: 2019)!,
+                endDate: Date.from(month: 6, year: 2023)!,
+                seekedDegree: .bachelor(graduation: .init(finalGrade: 4)),
+                programOfStudy: "Engineer Technologist"
+            ),
     ],
     skills: [
       [
         PercentageSkill(name: "Swift", relativeExperience: 1.0),
-        PercentageSkill(name: "Obj-C", relativeExperience: 0.5),
-        PercentageSkill(name: "C#", relativeExperience: 0.4),
-        PercentageSkill(name: "Java", relativeExperience: 0.4),
-        PercentageSkill(name: "C", relativeExperience: 0.2),
+        PercentageSkill(name: "SwiftUI", relativeExperience: 0.8),
+        PercentageSkill(name: "UIKit", relativeExperience: 0.6),
       ],
       [
-        PercentageSkill(name: "German (native language)", relativeExperience: 1.0),
-        PercentageSkill(name: "English", relativeExperience: 0.8),
+        PercentageSkill(name: "Tajik (native language)", relativeExperience: 1.0),
+        PercentageSkill(name: "Uzbek", relativeExperience: 1.0),
+        PercentageSkill(name: "English", relativeExperience: 0.5),
+        PercentageSkill(name: "Russian", relativeExperience: 0.3),
       ],
       [
-        BasicSkill(name: "UIKit"),
-        BasicSkill(name: "SwiftUI"),
-        BasicSkill(name: "VIP"),
-        BasicSkill(name: "VIPER"),
-        BasicSkill(name: "CocoaPods"),
-        BasicSkill(name: "MVVM"),
-        BasicSkill(name: "fastlane"),
-        BasicSkill(name: "Logic Pro"),
-        BasicSkill(name: "Adobe Creative Cloud"),
-        BasicSkill(name: "SPM"),
-        BasicSkill(name: "Final Cut Pro"),
-        BasicSkill(name: "Combine"),
-        BasicSkill(name: "Unit testing"),
-        BasicSkill(name: "ARKit"),
-        BasicSkill(name: "GRDB"),
-        BasicSkill(name: "Sketch"),
+        BasicSkill(name: "TDD, Unit & UI Testing"),
+        BasicSkill(name: "Xcode & SPM & CocoaPods"),
+        BasicSkill(name: "3rd Party SDKs"),
+        BasicSkill(name: "API(S) Integration"),
+        BasicSkill(name: "SOLID, DRY, KISS"),
+        BasicSkill(name: "Git, Github"),
+        BasicSkill(name: "MVC & MVVM & Clean Swift (VIP)"),
       ],
-    ],
-    trainings: [
-      Training(
-        name: "NSSpain X",
-        date: Date.from(year: 2022)!,
-        info: []
-      ),
-      Training(
-        name: "Interviewtraining",
-        date: Date.from(year: 2021)!,
-        info: [
-          "by Katja Loose, Excellence in Talents",
-        ]
-      ),
-      Training(
-        name: "NSSpain",
-        date: Date.from(year: 2020)!,
-        info: []
-      ),
     ],
     interests: [
-      Interest("Music Production"),
-      Interest("Apple"),
-      Interest("Songwriting"),
-      Interest("Singing"),
-      Interest("Film production"),
-      Interest("Cars"),
+      Interest("Open source projects"),
       Interest("Coding"),
-      Interest("Badminton"),
-      Interest("Aviation"),
-      Interest("Guitars"),
+      Interest("Artificial intelligence"),
+      Interest("Machine learning "),
+      Interest("Cyber security"),
+      Interest("Teaching"),
+      Interest("Traveling"),
+
     ]
   )
 }

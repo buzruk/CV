@@ -11,8 +11,8 @@ struct TagView: View {
   let items: [String]
 
   var body: some View {
-    FlowLayout(alignment: .leading, spacing: .cvSemiSmallSpacing) {
-      ForEach(items, id: \.self) { item in
+    FlowLayout(alignment: .topLeading) {
+      ForEach(self.items, id: \.self) { item in
         Item(title: item)
       }
     }
@@ -22,24 +22,20 @@ struct TagView: View {
     let title: String
 
     var body: some View {
-      Text(title)
+      Text(self.title)
         .padding([.leading, .trailing], .cvMediumSpacing)
         .padding([.top, .bottom], .cvSmallSpacing)
         .font(.footnote)
         .foregroundColor(.cvPrimary)
         .background(
           Capsule(style: .continuous)
-            .fill(Color.cvBackground)
+            .fill(Color.cvShadow)
             .shadow(color: .cvShadow, radius: 2)
         )
     }
   }
 }
 
-struct TagView_Previews: PreviewProvider {
-  static var previews: some View {
-    TagView(items: Person.me.interests)
-      .frame(width: 330)
-      .previewLayout(.sizeThatFits)
-  }
+#Preview {
+  TagView(items: Person.me.interests)
 }

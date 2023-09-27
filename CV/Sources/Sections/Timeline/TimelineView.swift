@@ -29,7 +29,6 @@ struct TimelineView: View {
             TimelineSectionView(viewModel: section)
           }
         }
-        .accessibilityElement(children: .contain)
       }
     }
     .overlayPreferenceValue(TimelineDotPreferenceKey.self) { preferences in
@@ -65,24 +64,24 @@ struct TimelineView: View {
           items
         }
       }
-      .accessibilityElement(children: .contain)
     }
 
     private var timelineDot: some View {
       RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
         .fill(Color.accentColor)
         .frame(width: Constant.timelineDotSize.width, height: Constant.timelineDotSize.height)
-        .alignmentGuide(.titleAndTimelineRectangle) { d in
-          d[VerticalAlignment.center]
+        .alignmentGuide(.titleAndTimelineRectangle) { dimension in
+          dimension[VerticalAlignment.center]
         }
     }
 
     private var title: some View {
       Text(viewModel.title)
-        .font(.largeTitle)
+        .font(.title2)
+        .bold()
         .foregroundColor(.cvPrimary)
-        .alignmentGuide(.titleAndTimelineRectangle) { d in
-          d[VerticalAlignment.center]
+        .alignmentGuide(.titleAndTimelineRectangle) { dimension in
+          dimension[VerticalAlignment.center]
         }
     }
 
@@ -95,52 +94,68 @@ struct TimelineView: View {
 
   private struct TimelineItemView: View {
     let viewModel: TimelineViewModel.Item
+    #if os(iOS)
+      @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    #endif
 
     var body: some View {
       VStack(alignment: .leading, spacing: .cvSmallSpacing) {
-        summary
+        #if os(iOS)
+          if horizontalSizeClass == .compact {
+            summary
+            DateView(date: viewModel.timeframe)
+          } else {
+            summary
+          }
+        #else
+          summary
+        #endif
 
         if !viewModel.info.isEmpty {
           infoItems
         }
       }
-      .accessibilityElement(children: .contain)
     }
 
     private var summary: some View {
       HStack {
         Text(viewModel.title)
-          .font(.title)
+          .font(.title3)
           .foregroundColor(.cvPrimary)
 
         if let additionalTitle = viewModel.additionalTitle {
           Text("•")
-            .font(.title)
+            .font(.title3)
             .foregroundColor(.accentColor)
-            .accessibilityHidden(true)
+
           Text(additionalTitle.content)
-            .font(.title)
+            .font(.title3)
             .foregroundColor(.cvSecondary)
             .accessibilityLabel(additionalTitle.spokenContent)
         }
 
         Spacer()
 
-        DateView(date: viewModel.timeframe)
+        #if os(iOS)
+          if horizontalSizeClass == .regular {
+            DateView(date: viewModel.timeframe)
+          }
+        #else
+          DateView(date: viewModel.timeframe)
+        #endif
       }
-      .accessibilityElement(children: .combine)
     }
 
     private var infoItems: some View {
       VStack(alignment: .leading, spacing: .cvExtraSmallSpacing) {
         ForEach(viewModel.info, id: \.self.content) { info in
           Text(info.formattedContent)
-            .font(.footnote)
+            .font(.callout)
+            .padding(5)
             .foregroundColor(.cvSecondary)
             .accessibilityLabel(info.content)
         }
       }
-      .accessibilityElement(children: .combine)
     }
   }
 }
@@ -160,8 +175,8 @@ struct TimelineDotPreferenceKey: PreferenceKey {
 
 private extension VerticalAlignment {
   struct TitleAndTimelineRectangle: AlignmentID {
-    static func defaultValue(in d: ViewDimensions) -> CGFloat {
-      d[VerticalAlignment.center]
+    static func defaultValue(in dimension: ViewDimensions) -> CGFloat {
+      dimension[VerticalAlignment.center]
     }
   }
 
@@ -169,5 +184,7 @@ private extension VerticalAlignment {
 }
 
 #Preview {
-  TimelineView(viewModel: TimelineViewModel(jobs: Person.me.jobs))
+//  TimelineView(viewModel: TimelineViewModel(educationalBackground: Person.me.educationalBackground))
+
+  TimelineView(viewModel: TimelineViewModel(projects: Person.me.projects))
 }

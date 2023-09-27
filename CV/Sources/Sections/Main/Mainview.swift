@@ -9,47 +9,66 @@ import SwiftUI
 
 struct MainView: View {
   @ObservedObject var viewModel: MainViewModel
+  #if os(iOS)
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+  #endif
 
   var body: some View {
     ScrollView {
       VStack(spacing: .cvExtraLargeSpacing) {
         HeaderView(viewModel: viewModel.header)
-          .padding(.top, viewModel.isSnapshotting ? .cvSmallSpacing : .zero)
-          .accessibilityElement(children: .contain)
+          .padding(.top, .zero)
 
         ForEach(viewModel.timelines) { timeline in
           Section(title: timeline.title) {
             TimelineView(viewModel: timeline)
           }
-          .accessibilityElement(children: .contain)
         }
         .padding(.bottom, .cvExtraLargeSpacing)
 
-        HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
-          Section(title: viewModel.skills.title) {
-            SkillsView(viewModel: viewModel.skills)
-          }
-          .accessibilityElement(children: .contain)
+        #if os(iOS)
+          if horizontalSizeClass == .compact {
+            VStack(spacing: .cvExtraLargeSpacing) {
+              Section(title: viewModel.skills.title) {
+                SkillsView(viewModel: viewModel.skills)
+              }
 
-          Spacer()
-
-          VStack(alignment: .leading) {
-            Section(title: viewModel.trainings.title) {
-              TrainingsView(viewModel: viewModel.trainings)
+              VStack(alignment: .leading) {
+                Section(title: viewModel.interests.title) {
+                  InterestsView(viewModel: viewModel.interests)
+                }
+              }
             }
-            .accessibilityElement(children: .contain)
+          } else {
+            HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
+              Section(title: viewModel.skills.title) {
+                SkillsView(viewModel: viewModel.skills)
+              }
 
-            Section(title: viewModel.interests.title) {
-              InterestsView(viewModel: viewModel.interests)
+              Spacer()
+
+              VStack(alignment: .leading) {
+                Section(title: viewModel.interests.title) {
+                  InterestsView(viewModel: viewModel.interests)
+                }
+              }
             }
-            .accessibilityElement(children: .contain)
           }
-        }
+        #else
+          HStack(alignment: .top, spacing: .cvExtraLargeSpacing) {
+            Section(title: viewModel.skills.title) {
+              SkillsView(viewModel: viewModel.skills)
+            }
 
-        if viewModel.isSnapshotting {
-          FooterView()
-            .padding(.top, .cvExtraLargeSpacing)
-        }
+            Spacer()
+
+            VStack(alignment: .leading) {
+              Section(title: viewModel.interests.title) {
+                InterestsView(viewModel: viewModel.interests)
+              }
+            }
+          }
+        #endif
       }
       .padding(.cvExtraLargeSpacing)
     }
@@ -64,23 +83,13 @@ struct MainView: View {
         Text(title)
           .font(.title)
           .foregroundColor(.cvTertiary)
-          .accessibilityAddTraits(.isHeader)
+
         content()
       }
     }
   }
-
-  private struct FooterView: View {
-    var body: some View {
-      Text("This CV was generated in SwiftUI ✨")
-        .font(.headline)
-        .foregroundColor(.cvTertiary)
-    }
-  }
 }
 
-struct MainView_Previews: PreviewProvider {
-  static var previews: some View {
-    MainView(viewModel: MainViewModel(person: .me))
-  }
+#Preview {
+  MainView(viewModel: MainViewModel(person: .me))
 }

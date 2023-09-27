@@ -18,16 +18,14 @@ struct DateView: View {
       .foregroundColor(.cvPrimary)
       .background(
         RoundedRectangle(cornerRadius: .cvSmallCornerRadius, style: .continuous)
-          .fill(Color.cvBackground)
+          .fill(Color.cvShadow)
           .shadow(color: .cvShadow, radius: 2)
       )
   }
 }
 
-struct DateView_Previews: PreviewProvider {
-  static var previews: some View {
-    DateView(date: "Today")
-      .padding()
-      .previewLayout(.sizeThatFits)
-  }
+#Preview {
+  DateView(date: "Today")
+    .padding()
+    .previewLayout(.sizeThatFits)
 }

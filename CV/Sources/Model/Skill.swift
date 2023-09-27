@@ -5,8 +5,6 @@
 //  Created by Buzurgmexr Sultonaliyev on 26/09/23.
 //
 
-import Foundation
-
 protocol Skill {
   var name: String { get }
 }

@@ -18,9 +18,9 @@ struct TimelineViewModel: Identifiable {
 
     let jobSections: [TimelineViewModel.Section] = Dictionary(grouping: jobs, by: \.companyName)
       .sorted { lhs, rhs in
-        guard let lhsFirstJob = lhs.value.first, let rhsFirstJob = rhs.value.first else {
-          return false
-        }
+        guard let lhsFirstJob = lhs.value.first,
+              let rhsFirstJob = rhs.value.first
+        else { return false }
 
         return lhsFirstJob.startDate > rhsFirstJob.startDate
       }
@@ -40,7 +40,7 @@ struct TimelineViewModel: Identifiable {
               title: job.role,
               additionalTitle: additionalTitle,
               timeframe: Self.formattedTimeframe(periodOfLife: job),
-              info: job.info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+              info: job.info.map { InfoViewModel(bulletPoint: "☆", content: $0) }
             )
           }
 
@@ -62,9 +62,9 @@ struct TimelineViewModel: Identifiable {
 
     let educationalBackgroundSections: [TimelineViewModel.Section] = Dictionary(grouping: educationalBackground, by: \.institutionName)
       .sorted { lhs, rhs in
-        guard let lhsFirstEducationalBackground = lhs.value.first, let rhsFirstEducationalBackground = rhs.value.first else {
-          return false
-        }
+        guard let lhsFirstEducationalBackground = lhs.value.first,
+              let rhsFirstEducationalBackground = rhs.value.first
+        else { return false }
 
         return lhsFirstEducationalBackground.startDate > rhsFirstEducationalBackground.startDate
       }
@@ -73,12 +73,9 @@ struct TimelineViewModel: Identifiable {
           .map { education in
             var info = [String]()
             switch education.seekedDegree {
-            case .abitur(let graduation):
-              info.append(graduation.localizedFinalGrade)
             case .bachelor(let graduation):
               guard let graduation else { break }
               info.append(graduation.localizedFinalGrade)
-              info.append(graduation.localizedTopicOfFinalThesis)
             }
 
             var additionalTitle: TimelineViewModel.Item.AdditionalTitle? = nil
@@ -94,7 +91,7 @@ struct TimelineViewModel: Identifiable {
               title: education.seekedDegree.localized,
               additionalTitle: additionalTitle,
               timeframe: Self.formattedTimeframe(periodOfLife: education),
-              info: info.map { InfoViewModel(bulletPoint: ">", content: $0) }
+              info: info.map { InfoViewModel(bulletPoint: "☆", content: $0) }
             )
           }
 
@@ -108,6 +105,50 @@ struct TimelineViewModel: Identifiable {
       }
 
     self.sections = educationalBackgroundSections
+  }
+
+  init(projects: [Project]) {
+    self.id = UUID().uuidString
+    self.title = "Projects"
+
+    let projectSections: [TimelineViewModel.Section] = Dictionary(grouping: projects, by: \.name)
+      .sorted { lhs, rhs in
+        guard let lhsFirstJob = lhs.value.first, let rhsFirstJob = rhs.value.first else {
+          return false
+        }
+
+        return lhsFirstJob.startDate > rhsFirstJob.startDate
+      }
+      .map { name, projects in
+        let items = projects
+          .map { project in
+            var additionalTitle: TimelineViewModel.Item.AdditionalTitle? = nil
+            if !project.programmingLanguages.isEmpty {
+              additionalTitle = TimelineViewModel.Item.AdditionalTitle(
+                content: project.programmingLanguages.map(\.localized).joined(separator: ", "),
+                spokenContent: project.programmingLanguages.map(\.spoken).joined(separator: ", ")
+              )
+            }
+
+            return TimelineViewModel.Item(
+              id: UUID().uuidString,
+              title: "",
+              additionalTitle: additionalTitle,
+              timeframe: Self.formattedTimeframe(periodOfLife: project),
+              info: project.info.map { InfoViewModel(bulletPoint: "☆", content: $0) }
+            )
+          }
+
+        let section = TimelineViewModel.Section(
+          id: UUID().uuidString,
+          title: name,
+          items: items
+        )
+
+        return section
+      }
+
+    self.sections = projectSections
   }
 
   private static func formattedTimeframe(periodOfLife: PeriodOfLife) -> String {
@@ -149,12 +190,6 @@ private extension ProgrammingLanguage {
       return "Swift"
     case .objC:
       return "Obj-C"
-    case .cSharp:
-      return "C#"
-    case .java:
-      return "Java"
-    case .c:
-      return "C"
     }
   }
 
@@ -164,12 +199,6 @@ private extension ProgrammingLanguage {
       return "Swift"
     case .objC:
       return "Objective C"
-    case .cSharp:
-      return "C sharp"
-    case .java:
-      return "Java"
-    case .c:
-      return "C"
     }
   }
 }
@@ -177,10 +206,8 @@ private extension ProgrammingLanguage {
 private extension Education.Degree {
   var localized: String {
     switch self {
-    case .abitur:
-      return "Abitur"
     case .bachelor:
-      return "Bachelor of Science"
+      return "Bachelor"
     }
   }
 }
@@ -188,11 +215,5 @@ private extension Education.Degree {
 private extension Graduation {
   var localizedFinalGrade: String {
     "Final grade: \(finalGrade)"
-  }
-}
-
-private extension Education.Degree.UniversityGraduation {
-  var localizedTopicOfFinalThesis: String {
-    "Topic of bachelor thesis: \"\(topicOfFinalThesis)\". Grade: \(gradeOfFinalThesis)."
   }
 }

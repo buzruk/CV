@@ -15,7 +15,6 @@
 		E682505B2AC2FBBB001FC8AB /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682505A2AC2FBBB001FC8AB /* Skill.swift */; };
 		E682505D2AC2FBC6001FC8AB /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682505C2AC2FBC6001FC8AB /* Education.swift */; };
 		E682505F2AC2FBD4001FC8AB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682505E2AC2FBD4001FC8AB /* Job.swift */; };
-		E68250612AC2FBE9001FC8AB /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250602AC2FBE9001FC8AB /* Training.swift */; };
 		E68250652AC2FC10001FC8AB /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250642AC2FC10001FC8AB /* Typealiases.swift */; };
 		E68250672AC2FC21001FC8AB /* ProgrammingLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250662AC2FC21001FC8AB /* ProgrammingLanguage.swift */; };
 		E68250692AC2FC91001FC8AB /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250682AC2FC91001FC8AB /* Date+Extension.swift */; };
@@ -32,12 +31,11 @@
 		E68250882AC30103001FC8AB /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250872AC30103001FC8AB /* SkillsView.swift */; };
 		E682508A2AC3011A001FC8AB /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250892AC3011A001FC8AB /* TagView.swift */; };
 		E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508B2AC30130001FC8AB /* FlowLayout.swift */; };
-		E682508E2AC302A9001FC8AB /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508D2AC302A9001FC8AB /* TrainingView.swift */; };
-		E68250902AC302BB001FC8AB /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */; };
 		E68250922AC30319001FC8AB /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250912AC30319001FC8AB /* InterestsView.swift */; };
 		E68250942AC30325001FC8AB /* InterestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250932AC30325001FC8AB /* InterestsViewModel.swift */; };
 		E68250972AC30377001FC8AB /* Mainview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250962AC30377001FC8AB /* Mainview.swift */; };
 		E68250992AC3038E001FC8AB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68250982AC3038E001FC8AB /* MainViewModel.swift */; };
+		E682509B2AC40A9C001FC8AB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E682509A2AC40A9C001FC8AB /* Launch Screen.storyboard */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +49,6 @@
 		E682505A2AC2FBBB001FC8AB /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		E682505C2AC2FBC6001FC8AB /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		E682505E2AC2FBD4001FC8AB /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		E68250602AC2FBE9001FC8AB /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		E68250642AC2FC10001FC8AB /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		E68250662AC2FC21001FC8AB /* ProgrammingLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingLanguage.swift; sourceTree = "<group>"; };
 		E68250682AC2FC91001FC8AB /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -68,12 +65,11 @@
 		E68250872AC30103001FC8AB /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		E68250892AC3011A001FC8AB /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		E682508B2AC30130001FC8AB /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
-		E682508D2AC302A9001FC8AB /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
-		E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		E68250912AC30319001FC8AB /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		E68250932AC30325001FC8AB /* InterestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewModel.swift; sourceTree = "<group>"; };
 		E68250962AC30377001FC8AB /* Mainview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainview.swift; sourceTree = "<group>"; };
 		E68250982AC3038E001FC8AB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E682509A2AC40A9C001FC8AB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +127,6 @@
 				E682505C2AC2FBC6001FC8AB /* Education.swift */,
 				E68250662AC2FC21001FC8AB /* ProgrammingLanguage.swift */,
 				E682505E2AC2FBD4001FC8AB /* Job.swift */,
-				E68250602AC2FBE9001FC8AB /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +155,7 @@
 			children = (
 				E68250472AC2FAB0001FC8AB /* Assets.xcassets */,
 				E68250492AC2FAB0001FC8AB /* CV.entitlements */,
+				E682509A2AC40A9C001FC8AB /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -181,7 +177,6 @@
 			children = (
 				E68250952AC30372001FC8AB /* Main */,
 				E68250712AC2FD34001FC8AB /* Interests */,
-				E68250702AC2FD30001FC8AB /* Trainings */,
 				E682506F2AC2FD26001FC8AB /* Skills */,
 				E682506E2AC2FD21001FC8AB /* Timeline */,
 				E682506D2AC2FD1D001FC8AB /* Header */,
@@ -214,15 +209,6 @@
 				E68250852AC300F3001FC8AB /* SkillsViewModel.swift */,
 			);
 			path = Skills;
-			sourceTree = "<group>";
-		};
-		E68250702AC2FD30001FC8AB /* Trainings */ = {
-			isa = PBXGroup;
-			children = (
-				E682508D2AC302A9001FC8AB /* TrainingView.swift */,
-				E682508F2AC302BB001FC8AB /* TrainingViewModel.swift */,
-			);
-			path = Trainings;
 			sourceTree = "<group>";
 		};
 		E68250712AC2FD34001FC8AB /* Interests */ = {
@@ -312,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E682509B2AC40A9C001FC8AB /* Launch Screen.storyboard in Resources */,
 				E682504C2AC2FAB0001FC8AB /* Preview Assets.xcassets in Resources */,
 				E68250482AC2FAB0001FC8AB /* Assets.xcassets in Resources */,
 			);
@@ -329,7 +316,6 @@
 				E682505D2AC2FBC6001FC8AB /* Education.swift in Sources */,
 				E68250792AC2FE1E001FC8AB /* Color+Extension.swift in Sources */,
 				E68250592AC2FB7E001FC8AB /* Person.swift in Sources */,
-				E682508E2AC302A9001FC8AB /* TrainingView.swift in Sources */,
 				E68250772AC2FD92001FC8AB /* CGFloat+Extension.swift in Sources */,
 				E68250652AC2FC10001FC8AB /* Typealiases.swift in Sources */,
 				E68250992AC3038E001FC8AB /* MainViewModel.swift in Sources */,
@@ -339,14 +325,12 @@
 				E682508C2AC30130001FC8AB /* FlowLayout.swift in Sources */,
 				E68250442AC2FAAE001FC8AB /* CVApp.swift in Sources */,
 				E682505B2AC2FBBB001FC8AB /* Skill.swift in Sources */,
-				E68250902AC302BB001FC8AB /* TrainingViewModel.swift in Sources */,
 				E68250752AC2FD65001FC8AB /* HeaderViewModel.swift in Sources */,
 				E68250692AC2FC91001FC8AB /* Date+Extension.swift in Sources */,
 				E68250572AC2FB72001FC8AB /* Person+me.swift in Sources */,
 				E68250922AC30319001FC8AB /* InterestsView.swift in Sources */,
 				E682508A2AC3011A001FC8AB /* TagView.swift in Sources */,
 				E68250732AC2FD50001FC8AB /* HeaderView.swift in Sources */,
-				E68250612AC2FBE9001FC8AB /* Training.swift in Sources */,
 				E682505F2AC2FBD4001FC8AB /* Job.swift in Sources */,
 				E68250842AC300B4001FC8AB /* DateFormatter+Extension.swift in Sources */,
 				E68250822AC3008B001FC8AB /* InfoViewModel.swift in Sources */,
@@ -478,11 +462,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CV/Resources/CV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CV/Preview Content\"";
-				DEVELOPMENT_TEAM = CTNN85R6QB;
+				DEVELOPMENT_TEAM = H2RT38X4Z7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -492,6 +477,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -516,11 +502,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = CV/Resources/CV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CV/Preview Content\"";
-				DEVELOPMENT_TEAM = CTNN85R6QB;
+				DEVELOPMENT_TEAM = H2RT38X4Z7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -530,6 +517,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

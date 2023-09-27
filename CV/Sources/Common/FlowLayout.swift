@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-// https://github.com/apple/sample-food-truck/blob/main/App/General/FlowLayout.swift
+//// https://github.com/apple/sample-food-truck/blob/main/App/General/FlowLayout.swift
 struct FlowLayout: Layout {
   var alignment: Alignment = .center
   var spacing: CGFloat?
-
+    
   func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) -> CGSize {
     let result = FlowResult(
       in: proposal.replacingUnspecifiedDimensions().width,
@@ -21,7 +21,7 @@ struct FlowLayout: Layout {
     )
     return result.bounds
   }
-
+    
   func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) {
     let result = FlowResult(
       in: proposal.replacingUnspecifiedDimensions().width,
@@ -40,17 +40,17 @@ struct FlowLayout: Layout {
       }
     }
   }
-
+    
   struct FlowResult {
     var bounds = CGSize.zero
     var rows = [Row]()
-
+        
     struct Row {
       var range: Range<Int>
       var xOffsets: [Double]
       var frame: CGRect
     }
-
+        
     init(in maxPossibleWidth: Double, subviews: Subviews, alignment: Alignment, spacing: CGFloat?) {
       var itemsInRow = 0
       var remainingWidth = maxPossibleWidth.isFinite ? maxPossibleWidth : .greatestFiniteMagnitude
@@ -64,25 +64,25 @@ struct FlowLayout: Layout {
           finalizeRow(index: max(index - 1, 0), idealSize: idealSize)
         }
         addToRow(index: index, idealSize: idealSize)
-
+                
         if index == subviews.count - 1 {
           // Finish this row; it's either full or we're on the last view anyway.
           finalizeRow(index: index, idealSize: idealSize)
         }
       }
-
+            
       func spacingBefore(index: Int) -> Double {
         guard itemsInRow > 0 else { return 0 }
         return spacing ?? subviews[index - 1].spacing.distance(to: subviews[index].spacing, along: .horizontal)
       }
-
+            
       func widthInRow(index: Int, idealWidth: Double) -> Double {
         idealWidth + spacingBefore(index: index)
       }
-
+            
       func addToRow(index: Int, idealSize: CGSize) {
         let width = widthInRow(index: index, idealWidth: idealSize.width)
-
+                
         xOffsets.append(maxPossibleWidth - remainingWidth + spacingBefore(index: index))
         // Allocate width to this item (and spacing).
         remainingWidth -= width
@@ -91,7 +91,7 @@ struct FlowLayout: Layout {
         // Can fit in this row, add it.
         itemsInRow += 1
       }
-
+            
       func finalizeRow(index: Int, idealSize: CGSize) {
         let rowWidth = maxPossibleWidth - remainingWidth
         rows.append(
