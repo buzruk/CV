@@ -22,7 +22,7 @@ Min. version:
 
 | iPhone 14 Pro | iPad Pro (12.9-inch) (6th generation) | macos |
 |--|--|--|
-|<img src="https://github.com/buzruk/Calculator-iOS-Storyboard/blob/main/screenshots/demo-image.png" width="200">|<img src="https://github.com/buzruk/Calculator-iOS-Storyboard/blob/main/screenshots/demo-gif.gif" width="200">|<img src="https://github.com/buzruk/Calculator-iOS-Storyboard/blob/main/screenshots/demo-gif.gif" width="200">|
+|<img src="https://github.com/buzruk/CV/blob/master/screenshots/iPhone%2014%20Pro.gif" width="200">|<img src="https://github.com/buzruk/CV/blob/master/screenshots/iPad%20Pro%20(12.9-inch)%20(6th%20generation).gif" width="200">|<img src="https://github.com/buzruk/CV/blob/master/screenshots/macos.gif" width="200">|
 
 ### iPad
 
