@@ -29,7 +29,7 @@ Min. version:
 
 | macos |
 |--|
-|<img src="https://github.com/buzruk/CV/blob/master/screenshots/macos.gif" width="400">|
+|<img src="https://github.com/buzruk/CV/blob/master/screenshots/macos.gif" width="600">|
 
 ## Getting Started
 * Clone repo and move inside it:
