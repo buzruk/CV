@@ -32,9 +32,9 @@
 ## Getting Started
 * Clone repo and move inside it:
 
-`git clone https://github.com/buzruk/CV.git && cd LifeManager`
+`git clone https://github.com/buzruk/CV.git && cd CV`
 
-* Choose scheme (iOS, macOS)
+* Choose device (iOS, macOS)
 
 * Running the project
 
@@ -52,7 +52,7 @@ To start contributing, check out [CONTRIBUTING.md](https://github.com/buzruk/CV/
 
 * Clone your forked repo and move inside it:
 
-`git clone https://github.com/buzruk/CV.git && cd LifeManager`
+`git clone https://github.com/buzruk/CV.git && cd CV`
 
 * Checkout to a new branch to work on an issue:
 
