@@ -61,14 +61,14 @@ extension Person {
 //      ),
     ],
     educationalBackground: [
-            Education(
-                institutionName: "Fergana Polytechnic Institute",
-                city: "Fergana",
-                startDate: Date.from(month: 9, year: 2019)!,
-                endDate: Date.from(month: 6, year: 2023)!,
-                seekedDegree: .bachelor(graduation: .init(finalGrade: 4)),
-                programOfStudy: "Engineer Technologist"
-            ),
+      Education(
+        institutionName: "Fergana Polytechnic Institute",
+        city: "Fergana",
+        startDate: Date.from(month: 9, year: 2019)!,
+        endDate: Date.from(month: 6, year: 2023)!,
+        seekedDegree: .bachelor(graduation: .init(finalGrade: 4)),
+        programOfStudy: "Engineer Technologist"
+      ),
     ],
     skills: [
       [
@@ -100,7 +100,6 @@ extension Person {
       Interest("Cyber security"),
       Interest("Teaching"),
       Interest("Traveling"),
-
     ]
   )
 }

@@ -5,7 +5,7 @@
 //  Created by Buzurgmexr Sultonaliyev on 26/09/23.
 //
 
-import SwiftUI
+import Foundation
 
 final class MainViewModel: ObservableObject {
   let header: HeaderViewModel

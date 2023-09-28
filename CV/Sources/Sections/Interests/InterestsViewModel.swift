@@ -5,6 +5,8 @@
 //  Created by Buzurgmexr Sultonaliyev on 26/09/23.
 //
 
+import Foundation
+
 struct InterestsViewModel {
   let title: String
   let items: [Item]

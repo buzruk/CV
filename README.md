@@ -1,20 +1,18 @@
-# CV
+<p align="center">
+  <img src="https://github.com/buzruk/CV/blob/master/CV/Resources/Assets.xcassets/LaunchIcon.imageset/LaunchIcon.png" height="128">
+  <h1 align="center">CV</h1>
+</p>
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-iOS%20|%20macOS%20-blue?style=flat)
+![UI](https://img.shields.io/badge/UI-SwiftUI-blue?style=flat)
+![Support](https://img.shields.io/badge/support-iOS_16.0%20|%20macOS_13.0%20-blue?style=flat)
+
 
 # Table of contents
-* [Tech Stack](#techstack)
-* [Getting Started](#gettingstarted)
+* [Screenshots](#screenshots)
+* [Getting Started](#getting-started)
 * [Contributing](#contributing)
-
-## Tech Stack
-
-**UI:** SwiftUI
-
-Min. version: 
-- *iOS 16.0* 
-- *macOS 13.0*
 
 ## Screenshots
 
@@ -46,7 +44,7 @@ Min. version:
 
 
 ## Contributing
-To start contributing, check out [CONTRIBUTING.md](https://github.com/IEEE-VIT/ToDo-iOS/blob/master/contributing.md). New contributors are always welcome to support this project.
+To start contributing, check out [CONTRIBUTING.md](https://github.com/buzruk/CV/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project.
 
 ** Follow this steps:
 
